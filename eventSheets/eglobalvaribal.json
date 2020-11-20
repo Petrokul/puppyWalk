@@ -1,0 +1,56 @@
+{
+	"name": "eGlobalVaribal",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "isHandPosition",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 153711790541183
+		},
+		{
+			"eventType": "variable",
+			"name": "targetCamera",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 940486938662023
+		},
+		{
+			"eventType": "variable",
+			"name": "strartHandRotation",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 557483116131000
+		},
+		{
+			"eventType": "variable",
+			"name": "isSetAngleHand",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 160121879021689
+		},
+		{
+			"eventType": "variable",
+			"name": "handAngle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 111818687013748
+		}
+	],
+	"sid": 354813883130744
+}

@@ -1,0 +1,32 @@
+{
+	"name": "eCamera",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 873242076022612,
+					"parameters": {
+						"variable": "targetCamera",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-object",
+					"objectClass": "System",
+					"sid": 124591391605715,
+					"parameters": {
+						"object": "Person"
+					}
+				}
+			],
+			"sid": 926718884299520
+		}
+	],
+	"sid": 841800678415696
+}

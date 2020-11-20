@@ -1,0 +1,109 @@
+{
+	"name": "eController",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 356246930344971
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Controller",
+					"sid": 560012483286316,
+					"parameters": {
+						"x": "Touch.X",
+						"y": "Touch.Y"
+					}
+				}
+			],
+			"sid": 584415503688123
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-in-touch",
+					"objectClass": "Touch",
+					"sid": 237094747307276
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Marker",
+					"sid": 269935562391355,
+					"parameters": {
+						"x": "Touch.X",
+						"y": "Touch.Y"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 142102549160854,
+					"parameters": {
+						"variable": "strartHandRotation",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 518973582589090,
+					"parameters": {
+						"variable": "isSetAngleHand",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 584667015258958
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 229902249403559
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Marker",
+					"sid": 725466055872921,
+					"disabled": true,
+					"parameters": {
+						"x": "Controller.X",
+						"y": "Controller.Y"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 523225195665302,
+					"parameters": {
+						"variable": "strartHandRotation",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 520708854951643,
+					"parameters": {
+						"variable": "isSetAngleHand",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 552544315997520
+		}
+	],
+	"sid": 721797802021817
+}

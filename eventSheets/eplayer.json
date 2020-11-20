@@ -1,0 +1,160 @@
+{
+	"name": "ePlayer",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 714173496983906
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 705790973860884,
+					"parameters": {
+						"variable": "isHandPosition",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "HandPerson",
+					"sid": 711403523746057,
+					"parameters": {
+						"object": "Person",
+						"image-point-optional": "1"
+					}
+				}
+			],
+			"sid": 321684927728162
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 418013940669915,
+					"parameters": {
+						"variable": "strartHandRotation",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "HandPerson",
+					"sid": 348103941990449,
+					"parameters": {
+						"angle": "handAngle"
+					}
+				}
+			],
+			"sid": 435109075454742
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 889439427513961,
+					"parameters": {
+						"variable": "strartHandRotation",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 604930039661984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 725733322583524,
+					"parameters": {
+						"variable": "isSetAngleHand",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 440192267957239,
+					"parameters": {
+						"variable": "handAngle",
+						"value": "angle(Marker.X, Marker.Y, Controller.X, Controller.Y)+90"
+					}
+				}
+			],
+			"sid": 811489428851822
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 203533270889586,
+					"parameters": {
+						"variable": "isSetAngleHand",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "HandPerson",
+					"sid": 398068047376881,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "300"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 102471915475705,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 256537770719741,
+					"parameters": {
+						"variable": "handAngle",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "HandPerson",
+					"sid": 686302927333092,
+					"parameters": {
+						"angle": "handAngle"
+					}
+				}
+			],
+			"sid": 644248774288210
+		}
+	],
+	"sid": 634728675108303
+}

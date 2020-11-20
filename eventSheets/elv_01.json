@@ -1,0 +1,26 @@
+{
+	"name": "eLv_01",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eCamera"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eDebug"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eGlobalVaribal"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ePlayer"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eController"
+		}
+	],
+	"sid": 743396007997514
+}
