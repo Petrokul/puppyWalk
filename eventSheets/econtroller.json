@@ -45,18 +45,18 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 142102549160854,
+					"sid": 132636620297340,
 					"parameters": {
-						"variable": "strartHandRotation",
+						"variable": "isSetAngleHand",
 						"value": "1"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 518973582589090,
+					"sid": 149440538223243,
 					"parameters": {
-						"variable": "isSetAngleHand",
+						"variable": "isSetAngleLineControll",
 						"value": "1"
 					}
 				}
@@ -86,16 +86,16 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 523225195665302,
+					"sid": 439764815291574,
 					"parameters": {
 						"variable": "strartHandRotation",
-						"value": "0"
+						"value": "1"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 520708854951643,
+					"sid": 770942193157793,
 					"parameters": {
 						"variable": "isSetAngleHand",
 						"value": "0"

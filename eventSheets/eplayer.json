@@ -2,6 +2,10 @@
 	"name": "ePlayer",
 	"events": [
 		{
+			"eventType": "comment",
+			"text": "первая строчка создаёт баг в 5ой строке, т.к. при старте HandPerson коллизится с LineControll, а значит isTuchControll = 1, и тут же произошла коллизия с Anchor"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -29,6 +33,24 @@
 						"object": "Person",
 						"image-point-optional": "1"
 					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "anchor",
+					"sid": 461939520499574,
+					"parameters": {
+						"object": "Person",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "lineControll",
+					"sid": 166770056460669,
+					"parameters": {
+						"object": "Person",
+						"image-point-optional": "1"
+					}
 				}
 			],
 			"sid": 321684927728162
@@ -39,9 +61,9 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 418013940669915,
+					"sid": 765212240733768,
 					"parameters": {
-						"variable": "strartHandRotation",
+						"variable": "isSetAngleHand",
 						"comparison": 0,
 						"value": "1"
 					}
@@ -51,13 +73,13 @@
 				{
 					"id": "set-angle",
 					"objectClass": "HandPerson",
-					"sid": 348103941990449,
+					"sid": 247976535782873,
 					"parameters": {
-						"angle": "handAngle"
+						"angle": "angle(Marker.X,Marker.Y,Controller.X,Controller.Y)+90"
 					}
 				}
 			],
-			"sid": 435109075454742
+			"sid": 363027104466128
 		},
 		{
 			"eventType": "block",
@@ -65,26 +87,9 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 889439427513961,
+					"sid": 527976757301275,
 					"parameters": {
-						"variable": "strartHandRotation",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 604930039661984
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 725733322583524,
-					"parameters": {
-						"variable": "isSetAngleHand",
+						"variable": "isSetAngleLineControll",
 						"comparison": 0,
 						"value": "1"
 					}
@@ -92,16 +97,15 @@
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 440192267957239,
+					"id": "set-angle",
+					"objectClass": "lineControll",
+					"sid": 963474948256979,
 					"parameters": {
-						"variable": "handAngle",
-						"value": "angle(Marker.X, Marker.Y, Controller.X, Controller.Y)+90"
+						"angle": "angle(Marker.X,Marker.Y,Controller.X,Controller.Y)+210"
 					}
 				}
 			],
-			"sid": 811489428851822
+			"sid": 385862593312133
 		},
 		{
 			"eventType": "block",
@@ -109,11 +113,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 203533270889586,
+					"sid": 904017866415158,
 					"parameters": {
-						"variable": "isSetAngleHand",
+						"variable": "strartHandRotation",
 						"comparison": 0,
-						"value": "0"
+						"value": "1"
 					}
 				}
 			],
@@ -121,39 +125,101 @@
 				{
 					"id": "set-speed",
 					"objectClass": "HandPerson",
-					"sid": 398068047376881,
+					"sid": 810419808054971,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "800"
+					}
+				}
+			],
+			"sid": 866649215299988
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "HandPerson",
+					"sid": 362038534795586,
+					"parameters": {
+						"object": "lineControll"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "HandPerson",
+					"sid": 894720545853628,
 					"behaviorType": "Rotate",
 					"parameters": {
 						"speed": "300"
 					}
 				},
 				{
-					"id": "wait",
+					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 102471915475705,
+					"sid": 706139980088411,
 					"parameters": {
-						"seconds": "1"
+						"variable": "strartHandRotation",
+						"value": "0"
 					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 256537770719741,
+					"sid": 382082293602655,
 					"parameters": {
-						"variable": "handAngle",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-angle",
-					"objectClass": "HandPerson",
-					"sid": 686302927333092,
-					"parameters": {
-						"angle": "handAngle"
+						"variable": "isTuchAnchor",
+						"value": "1"
 					}
 				}
 			],
-			"sid": 644248774288210
+			"sid": 898610817373667
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "HandPerson",
+					"sid": 832196307045805,
+					"parameters": {
+						"object": "anchor"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 611063167961833,
+					"parameters": {
+						"variable": "isTuchAnchor",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "HandPerson",
+					"sid": 837151280081236,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 416805846423923,
+					"parameters": {
+						"variable": "isTuchAnchor",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 296227734846811
 		}
 	],
 	"sid": 634728675108303

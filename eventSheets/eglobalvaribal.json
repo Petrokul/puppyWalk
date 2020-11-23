@@ -43,13 +43,33 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "handAngle",
+			"name": "isSetAngleLineControll",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 111818687013748
+			"sid": 760005285384858
+		},
+		{
+			"eventType": "variable",
+			"name": "isTuchAnchor",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 875801191021441
+		},
+		{
+			"eventType": "variable",
+			"name": "keepStick",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 753289596145256
 		}
 	],
 	"sid": 354813883130744

@@ -1,16 +1,10 @@
 {
-	"name": "HandPerson",
+	"name": "anchor",
 	"plugin-id": "Sprite",
-	"sid": 436510657893698,
+	"sid": 489232623740871,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Rotate",
-			"name": "Rotate",
-			"sid": 500346618385990
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -18,37 +12,30 @@
 				"frames": [
 					{
 						"width": 8,
-						"height": 40,
+						"height": 8,
 						"originX": 0.5,
-						"originY": 0,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4213385,
+						"imageSpriteId": 5800999,
 						"collisionPoly": {
 							"points": [
-								0.40384615384615385,
-								0.55,
-								0.5769230769230771,
-								0.548076923076924,
-								0.6923076923076921,
-								1,
-								0.25961538461538464,
-								1
+								0.416015625,
+								0.001953125,
+								0.5234375,
+								0,
+								0.513671875,
+								0.650390625,
+								0.400390625,
+								0.650390625
 							]
 						},
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "Image Point 1",
-								"x": 0.5,
-								"y": 1
-							}
-						],
 						"duration": 1
 					}
 				],
-				"sid": 954753840299612,
+				"sid": 437462418220665,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

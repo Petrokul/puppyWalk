@@ -26,6 +26,32 @@
 				}
 			],
 			"sid": 926718884299520
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 607188664287013,
+					"parameters": {
+						"variable": "targetCamera",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-object",
+					"objectClass": "System",
+					"sid": 480133581293820,
+					"parameters": {
+						"object": "Stick"
+					}
+				}
+			],
+			"sid": 366272165986288
 		}
 	],
 	"sid": 841800678415696

@@ -1,0 +1,101 @@
+{
+	"name": "eStick",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 582845870354597,
+					"parameters": {
+						"variable": "keepStick",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Stick",
+					"sid": 933930321177055,
+					"parameters": {
+						"object": "HandPerson",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Stick",
+					"sid": 725667628207320,
+					"parameters": {
+						"angle": "HandPerson.Angle+85"
+					}
+				}
+			],
+			"sid": 571311857172984
+		},
+		{
+			"eventType": "comment",
+			"text": "Нужно остановить повторный импульс, при каждом нажатие Tuch"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HandPerson",
+					"sid": 935270503367624,
+					"parameters": {
+						"object": "lineControll"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 351965681173430,
+					"parameters": {
+						"variable": "isTuchAnchor",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 191406596444281,
+					"parameters": {
+						"variable": "keepStick",
+						"value": "1"
+					}
+				},
+				{
+					"id": "apply-impulse-at-angle",
+					"objectClass": "Stick",
+					"sid": 546779200338670,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "1",
+						"angle": "Self.Angle",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 927760044032506,
+					"disabled": true,
+					"parameters": {
+						"variable": "targetCamera",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 473769632169547
+		}
+	],
+	"sid": 855372339291414
+}

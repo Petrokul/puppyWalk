@@ -82,7 +82,10 @@
 			"Touch",
 			"Keyboard",
 			"Controller",
-			"Marker"
+			"Marker",
+			"anchor",
+			"lineControll",
+			"Stick"
 		],
 		"subfolders": []
 	},
@@ -105,7 +108,8 @@
 			"ePlayer",
 			"eCamera",
 			"eDebug",
-			"eController"
+			"eController",
+			"eStick"
 		],
 		"subfolders": []
 	},

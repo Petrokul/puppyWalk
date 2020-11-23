@@ -20,6 +20,10 @@
 		{
 			"eventType": "include",
 			"includeSheet": "eController"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eStick"
 		}
 	],
 	"sid": 743396007997514
